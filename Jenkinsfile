@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("ana-kostadinovska/kiii-jenkins")
+       app = docker.build("akostadinovska/kiii-jenkins")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'ak-github') {
